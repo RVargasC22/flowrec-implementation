@@ -21,10 +21,39 @@ A diferencia de métodos tradicionales como MinT (Minimum Trace) que están dise
 
 ## 📦 Instalación
 
-Requiere Python 3.9+ y las librerías científicas estándar.
+1.  Clonar el repositorio:
+
+    ```bash
+    git clone https://github.com/RVargasC22/flowrec-implementation.git
+    cd flowrec-implementation
+    ```
+
+2.  Instalar dependencias:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+## 🚀 Quick Start (Demo)
+
+Para ver FlowRec en acción y generar las gráficas de validación de los Teoremas 8-11:
 
 ```bash
-pip install numpy scipy networkx pandas matplotlib
+python demo.py
+```
+
+Esto generará reportes visuales en la carpeta `output/`:
+
+- `flowrec_t8_expansion.png`: Ahorro computacional al agregar nodos.
+- `flowrec_t9_monotonicity.png`: Garantía de mejora global.
+- `flowrec_t10_disruption.png`: Recuperación ante fallos de nodos.
+- `flowrec_t11_epsilon.png`: Trade-off precisión vs velocidad.
+
+## ✅ Tests
+
+Para verificar la integridad del núcleo del algoritmo:
+
+```bash
+python -m unittest tests/test_core.py
 ```
 
 ## 🛠️ Uso Básico
